@@ -10,6 +10,16 @@ namespace ProiectPIU
     {
         static void Main(string[] args)
         {
+            var transactionMenu = new TransactionMenu();
+            
+            for(int i = 0; i <= 5; i++)
+            {
+                var newTransaction = new Transaction(DateTime.Now, 100, "Food", "Meniu");
+                transactionMenu.Transactions.Add(newTransaction);
+            }
+
+            transactionMenu.ShowTransactions();
+            Console.ReadLine();
         }
     }
 }
