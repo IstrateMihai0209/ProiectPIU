@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using Tranzactii;
 
 namespace ProiectPIU
 {
@@ -10,16 +8,42 @@ namespace ProiectPIU
     {
         static void Main(string[] args)
         {
-            var transactionMenu = new TransactionMenu();
+            string numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
+            AdministrareFisierText fisierAdmin = new AdministrareFisierText(numeFisier);
             
-            for(int i = 0; i <= 5; i++)
-            {
-                var newTransaction = new Transaction(DateTime.Now, 100, "Food", "Meniu");
-                transactionMenu.Transactions.Add(newTransaction);
-            }
+            MeniuTranzactii meniuTranzactii = new MeniuTranzactii();
+            meniuTranzactii.Tranzactii = fisierAdmin.GetTranzactii(); 
 
-            transactionMenu.ShowTransactions();
-            Console.ReadLine();
+            string optiune;
+            do
+            {
+                Console.WriteLine("I. Adaugare tranzactie");
+                Console.WriteLine("A. Afisare tranzactii luna curenta");
+
+                optiune = Console.ReadLine();
+                switch (optiune.ToUpper())
+                {
+                    case "I":
+                        Tranzactie tranzactie = meniuTranzactii.CitireTranzactie();
+                        meniuTranzactii.Tranzactii.Add(tranzactie);
+                        fisierAdmin.AdaugaTranzactie(tranzactie);
+                        break;
+
+                    case "A":
+                        meniuTranzactii.AfisareTranzactii();
+                        break;
+
+                    case "C":
+
+                        break;
+
+                    default:
+                        Console.WriteLine("Optiune inexistenta");
+                        break;
+                }
+            } while (optiune.ToUpper() != "X");
+
+            Console.ReadKey();
         }
     }
 }
