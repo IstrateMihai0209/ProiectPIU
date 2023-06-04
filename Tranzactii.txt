@@ -1,0 +1,15 @@
+Venit|Salariu|salariu de itist|1875|5/28/2023 6:47:15 AM
+Cheltuiala|Mancare|ciocolata|12|5/28/2023 6:47:15 AM
+Venit|Salariu|bonuri de masa|690|5/28/2023 6:51:10 AM
+Venit|Bonus|Bani de facut pizza|413|6/3/2023 1:36:22 AM
+Venit|Salariu|salariu de itist|1875|5/28/2023 6:47:15 AM
+Cheltuiala|Mancare|ciocolata|12|5/28/2023 6:47:15 AM
+Venit|Salariu|bonuri de masa|690|5/28/2023 6:51:10 AM
+Venit|Bonus|Bani de facut pizza|413|6/3/2023 1:36:22 AM
+Venit|Salariu|salariu de itist|1875|5/28/2023 6:47:15 AM
+Cheltuiala|Mancare|ciocolata|12|5/28/2023 6:47:15 AM
+Venit|Salariu|bonuri de masa|690|5/28/2023 6:51:10 AM
+Venit|Bonus|Bani de facut pizza|413|6/3/2023 1:36:22 AM
+Venit|Salariu|salariut aitist |43250|6/3/2023 6:34:34 AM
+Cheltuiala|Cadou|prajitura pentru puimic|50|6/3/2023 6:34:34 AM
+Cheltuiala|Mancare|dulce pupi pentru iubita mea|28|6/3/2023 6:49:43 AM

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using Tranzactii;
+using NivelStocareDate;
+using System.IO;
 
 namespace ProiectPIU
 {
@@ -9,7 +11,9 @@ namespace ProiectPIU
         static void Main(string[] args)
         {
             string numeFisier = ConfigurationManager.AppSettings["NumeFisier"];
-            AdministrareFisierText fisierAdmin = new AdministrareFisierText(numeFisier);
+            string locatieFisierSolutie = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string caleCompletaFisier = locatieFisierSolutie + "\\" + numeFisier;
+            AdministrareFisierText fisierAdmin = new AdministrareFisierText(caleCompletaFisier);
             
             MeniuTranzactii meniuTranzactii = new MeniuTranzactii();
             meniuTranzactii.Tranzactii = fisierAdmin.GetTranzactii(); 
